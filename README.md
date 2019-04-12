@@ -1,1 +1,1 @@
-React starter kit.
+React/Redux/Saga starter kit.
