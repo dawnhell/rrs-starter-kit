@@ -1,7 +1,7 @@
 import React from 'react';
 
 export const ROUTES = [
-  { name: 'HOME', path: '/home', view: () => (<div>home</div>) },
+  { name: 'HOME', path: '/', view: () => (<div>home</div>), exact: true },
   { name: 'ABOUT', path: '/about', view:  () => (<div>about</div>) },
   { name: 'LOGIN', path: '/login', view:  () => (<div>login</div>) },
   { name: 'REGISTER', path: '/register', view:  () => (<div>register</div>) },
