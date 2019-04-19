@@ -13,18 +13,16 @@ class ErrorBoundaryContainer extends React.Component {
     };
   }
 
-  componentDidCatch (error, info) {
+  componentDidCatch (error, errorInfo) {
     this.setState({
       hasError: true,
-      error: error,
-      errorInfo: info,
+      error,
+      errorInfo,
     });
   }
 
   render () {
     if (this.state.hasError) {
-      console.log(`Error happened:\n${this.state.error.error}\n${this.state.error.info}`);
-
       return (<ErrorBoundary error={this.state.error} errorInfo={this.state.errorInfo} />);
     }
 

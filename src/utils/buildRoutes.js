@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { v4 as uuid } from 'uuid';
 import { Route } from 'react-router-dom';
 
 const buildRoutes = routes => routes.map(route => (
@@ -7,6 +8,7 @@ const buildRoutes = routes => routes.map(route => (
     path={route.path}
     component={route.view}
     exact={route.exact}
+    key={`route-${route.path}-${uuid()}`}
   />
 ));
 
